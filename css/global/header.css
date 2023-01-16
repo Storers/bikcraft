@@ -28,11 +28,7 @@
 .header-menu a {
   padding: 16px 0px; /* Aumentar a area de contato */
   display: inline-block;
-  font-size: 1.125rem;
-  line-height: 1.178;
   position: relative;
-  font-family: "Poppins";
-  font-weight: 400;
 }
 
 .header-menu a:after {
