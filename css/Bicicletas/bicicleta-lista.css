@@ -2,6 +2,7 @@
   padding-top: 60px;
   padding-bottom: 120px;
 }
+
 .bicicletas-lista h2 {
   max-width: 1200px;
   box-sizing: border-box;
@@ -14,6 +15,54 @@
 .bicicletas-lista ul {
   display: flex;
   gap: 40px;
-  padding: 0 20px; /* Desgrudar das bordas */
+  padding: 0 20px 20px 20px; /* Desgrudar das bordas */
   max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+}
+.bicicletas-lista li {
+  flex: 1;
+  min-width: 280px; /* Isso faz que quando chegar no minimo 280px cada itens gere um scroll vertical*/
+}
+
+.bicicletas-lista a {
+  display: block;
+}
+
+.bicicletas-lista img {
+  margin-bottom: 16px;
+}
+
+.bicicletas-lista h3 {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.bicicletas-lista h3::before {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 12px;
+  margin-right: 8px;
+  background-color: var(--cor-p1);
+  transition: width 0.2s;
+}
+
+.bicicletas-lista a:hover h3::before {
+  width: 24px;
+}
+
+.bicicletas-lista li span {
+  padding-left: 20px; /* Alinhando o preço com o nome e a soma da margim direita mais a largura */
+}
+
+@media (max-width: 800px) {
+  .bicicletas-lista {
+    padding-bottom: 60px;
+  }
+  .bicicletas-lista ul {
+    gap: 20px;
+  }
 }
